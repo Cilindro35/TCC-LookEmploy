@@ -1,0 +1,173 @@
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+    margin:0 ;
+    padding-top: 32px;
+    font-family: 'poppins', sans-serif;
+    background:linear-gradient(135deg,#192435,#0C1524);
+    color: white;
+}
+
+a, .butao, .area{
+    transition: all 0.3 ease;
+}
+
+ header {
+    background-color:#303C4E ;
+    color: white;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ header h1 {
+    /*color: #5ce1e6;*/
+    margin: 0;
+ }
+
+ header h4 {
+    color: #5ce1e6;
+    display: flex;
+    justify-content: end;
+    margin: 0;
+ }
+
+ .header-img {
+   width: 170px;
+   height: 67x;
+   margin: 0;
+ }
+
+ nav a {
+    color: white;
+    margin-right: 32px;
+    text-decoration: none;
+ }
+
+ nav a:hover  {
+    text-decoration: underline;
+ }
+
+.formulario {
+   display: inline-block;
+   background-color: #192435;
+   color: white;
+   padding: 12px;
+   margin-top: 8px;
+   text-decoration: none;
+   border-radius: 8px;
+   width: 100%;
+   font-weight: bold;
+   box-shadow: none;
+   border-style: solid;
+   border-color: white;
+}
+
+.botao {
+   display: inline-block;
+   margin-top: 20px;
+   background-color: #5ce1e6;
+   color: black;
+   padding: 12px 24px;
+   text-decoration: none;
+   border-radius: 8px;
+   font-weight: bold;
+   box-shadow: none;
+   border-style: unset;
+}
+
+.botao:hover{
+   background-color:#47949F;
+   transform: scale(1.05);
+}
+
+ .visao_geral {
+   text-align: center;
+   font-size: 1.7em;
+   padding: 20px;
+   align-items: center;
+ }
+
+ .text {
+   text-align: left;
+   padding: 25px 320px;
+   background-color: #192435;
+}
+
+.text h2 {
+   font-size: 1.7em;
+}
+
+.text p{
+   font-size: 16px;
+}
+
+.contato {
+   text-align: start;
+}
+.contato p {
+
+   text-align: start;
+}
+
+.rede_social{
+   display: flex;
+   gap: 40px;
+}
+.rede_social i {
+   margin-right: 20px;
+}
+.icon-space{
+   margin-right: 15px;
+}
+ 
+
+ .categorias {
+    padding: 40px 20px;
+    text-align: center;
+ }
+
+ 
+
+ footer{
+    background-color: #0C1524;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color:white
+ }
+
+
+ @media (max-width: 768px) {
+    header{
+        flex-direction: column;
+        text-align: center;
+    }
+    nav a {
+        margin: 10px 10px 0 10px;
+        display: inline-block;
+    }
+    .job{ 
+        padding:  40px 15px;
+    }
+    .areas {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .area{
+        width: 90%;
+        max-width: 300px;
+    }
+    .butao{
+        width: 100%;
+        max-width: 250px;
+    }
+ }
