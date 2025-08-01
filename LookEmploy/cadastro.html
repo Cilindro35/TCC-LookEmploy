@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="css/login_design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/logo_icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="toda_pagina">
+    <header>
+        <a href="index.html"><h1><img class="header-img" src="img/logo.png"></h1></a>
+    </header>     
+        <div class="login"> 
+            <h2>Criar conta</h2>
+            <form id="formulario" action="php/salvarFormCadastro.php" method="post">
+                <div>
+                    <!-- Tipo de conta --> 
+                    <select name="tipo" id="tipo">
+                        <option value="cliente">Cliente</option>
+                        <option value="prestador">Prestador</option>
+                    </select>
+                </div>
+                    <!-- Email -->
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <span id="emailInvalido"></span>
+
+                    <!-- Senha -->
+                    <input type="password" id="senha" name="senha" placeholder="Senha">
+                    <span id="senhaInvalida"></span>
+
+                <button type="submit">Continuar</button>
+            </form>
+        </div>
+    </div>
+    <!-- <script type="text/javascript" src="js/validacaoFormUm.js"></script> -->
+</body>
+</html>

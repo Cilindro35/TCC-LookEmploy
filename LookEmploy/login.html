@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="css/login_design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/logo_icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="toda_pagina">
+    <header>
+        <a href="index.html"><h1><img class="header-img" src="img/logo.png"></h1></a>
+    </header>      
+        <div class="login">
+            <h2>Usuário</h2>
+            <form id="formulario" action="php/enviarFormLogin.php" method="post">
+                <!-- Email -->
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <span id="emailInvalido"></span>
+
+                <!-- Senha -->
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                <span id="senhaInvalida"></span>
+
+                <!-- Esqueceu a senha/Não possui conta -->
+                <div class="es_senha">
+                    <a href="">Esqueceu a senha?</a><br>
+                    <a href="cadastro.html">Não possui conta?</a>
+                </div>
+
+                <button type="submit">Fazer Login</button>
+            </form>
+        </div>
+        <!--div class="p_cad"><a href="cadastro.html">Não possui conta?</a></div-->
+    </div>
+</div>
+
+   
+</body>
+</html>
