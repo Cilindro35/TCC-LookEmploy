@@ -15,7 +15,7 @@ USE LookEmploy;
 		numero VARCHAR(10) NOT NULL,
 		complemento VARCHAR(150),
 		sexo VARCHAR(9) NOT NULL,
-		genero VARCHAR(40) NOT NULL,
+		-- genero VARCHAR(40) NOT NULL,
 		dataNascimento DATE,
 
 		descricao TEXT,
@@ -37,7 +37,7 @@ USE LookEmploy;
 		numero VARCHAR(10) NOT NULL,
 		complemento VARCHAR(150),
 		sexo VARCHAR(9) NOT NULL,
-		genero VARCHAR(40) NOT NULL,
+		-- genero VARCHAR(40) NOT NULL,
 		dataNascimento DATE,
 
 		descricao TEXT,
