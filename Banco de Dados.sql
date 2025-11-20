@@ -17,6 +17,7 @@ CREATE TABLE Cliente (
 	sexo VARCHAR(9) NOT NULL,
 	-- genero VARCHAR(40) NOT NULL,
 	dataNascimento DATE,
+	primeiroLogin int,
 
 	descricao TEXT,
 	caminhoImagemPerfil VARCHAR(255),
@@ -39,6 +40,7 @@ CREATE TABLE Prestador (
 	sexo VARCHAR(9) NOT NULL,
 	-- genero VARCHAR(40) NOT NULL,
 	dataNascimento DATE,
+	primeiroLogin INT,
 
 	descricao TEXT,
 	caminhoImagemPerfil VARCHAR(255),
