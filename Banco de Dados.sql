@@ -11,7 +11,7 @@ CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(400) NOT NULL,
     email VARCHAR(400) NOT NULL UNIQUE,
-    senha VARCHAR(255) NOT NULL, -- armazenar hash (bcrypt/argon2) 
+    senha VARCHAR(255) NOT NULL, -- armazenar hash (bcrypt/argon2) - 255 suficiente
     tipo ENUM('cliente','prestador','admin') NOT NULL DEFAULT 'cliente',
     online TINYINT(1) DEFAULT 0,
     last_login DATETIME NULL,
@@ -88,8 +88,8 @@ CREATE TABLE Servico (
     tipoPagamento VARCHAR(150) NOT NULL,
     descricao TEXT,
     contrato TEXT,
-    prestador INT NOT NULL,
-    cliente INT NOT NULL,
+    prestador INT NULL,
+    cliente INT NULL,
     criado_em DATETIME DEFAULT CURRENT_TIMESTAMP,
     atualizado_em DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     INDEX idx_servico_prestador (prestador),
