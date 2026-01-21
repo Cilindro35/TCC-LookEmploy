@@ -213,7 +213,8 @@ Cadastre-se como "Prestador" informando sua especialidade
 5. Fluxo de um Serviço
 Cliente contrata → Prestador aceita → Chat de detalhes → 
 Serviço realizado → Cliente avalia → Histórico salvo
-🧪 Testando o Sistema
+
+### 🧪 Testando o Sistema
 Teste de Segurança Integrado
 Acesse: http://localhost/lookemploy/teste_seguranca.html
 
@@ -253,7 +254,7 @@ Validação de datas passadas
 
 Upload de arquivos maliciosos (deve ser bloqueado)
 
-🤝 Contribuindo
+### 🤝 Contribuindo
 Este é um projeto acadêmico, mas contribuições são bem-vindas para:
 
 Reportar bugs
@@ -311,7 +312,7 @@ Curso: Desenvolvimento de Sistemas
 Período: 2023.1/2026
 Disciplina: Trabalho de Conclusão de Curso
 
-🙏 Agradecimentos
+### 🙏 Agradecimentos
 Aos meus amigos que deram sugestões incriveis
 
 Aos professores que contribuíram para minha formação
