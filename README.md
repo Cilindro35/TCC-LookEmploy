@@ -182,10 +182,6 @@ lookemploy/
 
 ### Passos básicos
 
-# AVISO IMPORTANTE
-
-# EXTRAÍ TODOS OS ARQUIVOS DENTRO LookEmploy/Api_chat/vendor, Assim a Api funcionara normalmente
-
 # 1. Clone o repositório
 git clone https://github.com/seu-usuario/lookemploy.git
 cd lookemploy
