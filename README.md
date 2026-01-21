@@ -206,33 +206,33 @@ http://localhost/lookemploy
 
 1. Configuração do Banco de Dados
 
-Edite o arquivo api_chat/conectar.php:
+  Edite o arquivo api_chat/conectar.php:
 
-$host = 'localhost';
+  $host = 'localhost';
 
-$dbname = 'lookemploy';
+  $dbname = 'lookemploy';
 
-$username = 'root';
+  $username = 'root';
 
-$password = 'sua_senha';
+  $password = 'sua_senha';
 
 2. Configuração do Servidor Web
 Apache: Configure o VirtualHost apontando para a pasta lookemploy
 
-Nginx: Configure o root para o diretório do projeto
+  Nginx: Configure o root para o diretório do projeto
 
 3. Variáveis de Ambiente (Opcional)
 Crie um arquivo .env na raiz do projeto:
 
-DB_HOST=localhost
+  DB_HOST=localhost
 
-DB_NAME=lookemploy
+  DB_NAME=lookemploy
 
-DB_USER=root
+  DB_USER=root
 
-DB_PASS=sua_senha
+  DB_PASS=sua_senha
 
-JWT_SECRET=sua_chave_secreta_aqui
+  JWT_SECRET=sua_chave_secreta_aqui
 
 5. Configuração do WebSocket
 Porta padrão: 8080
