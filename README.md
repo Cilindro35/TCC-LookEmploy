@@ -93,42 +93,79 @@
 
 lookemploy/
 ├── 📂 api_chat/
+
 │ ├── 📂 src/Security/ # Autenticação, criptografia, logs
+
 │ ├── 📄 servidor_chat_seguro.php
-│ └── 📂 vendor/
+
+│└── 📂 vendor/
+
 │
+
 ├── 🎨 css/
+
 │ ├── design_cadastro.css
+
 │ ├── design_login.css
+
 │ ├── design_perfil.css
+
 │ ├── design_contatos.css
+
 │ ├── design_pedidos.css
+
 │ └── design_telaInicial.css
+
 │
+
 ├── ⚡ js/
+
 │ ├── validacaoCadastro.js
+
 │ ├── validacaoLogin.js
+
 │ ├── contatos_seguro.js # Chat em tempo real
+
 │ └── menuLateral.js
+
 │
+
 ├── 🖥️ php/
+
 │ ├── realizarCadastro.php
+
 │ ├── realizarLogin.php
+
 │ ├── realizarLogout.php
+
 │ └── excluirConta.php
+
 │
+
 ├── 🖼️ img/
+
 │ ├── logo.png
+
 │ ├── logo_icon.png
+
 │ ├── img_perfil/ # Fotos de usuários
+
 │ └── telaInicial/ # Banner da home
+
 │
+
 ├── 📄 index.html # Landing page
+
 ├── 📄 cadastro.html # Cadastro
+
 ├── 📄 login.html # Login
+
 ├── 📄 telaInicial.php # Dashboard
+
 ├── 📄 perfil.php # Perfil
+
 ├── 📄 contatos.php # Chat
+
 └── 📄 pedidos.php # Serviços contratados
 ---
 
