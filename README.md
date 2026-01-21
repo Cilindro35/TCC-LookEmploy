@@ -227,7 +227,7 @@ Certifique-se de que a porta está liberada no firewall
 
 Para produção, considere usar um proxy reverso (Nginx)
 
-📖 Como Usar
+### 📖 Como Usar
 Para Clientes
 Cadastre-se como "Cliente"
 
