@@ -379,16 +379,12 @@ Período: 2023.1/2026
 Disciplina: Trabalho de Conclusão de Curso
 
 ### 🙏 Agradecimentos
-Aos meus amigos que deram sugestões incriveis
 
-Aos professores que contribuíram para minha formação
-
-Aos colegas de classe pelo apoio mútuo
-
-À minha família pelo suporte incondicional
-
-Aos alunos e professores que testaram e opinaram
-
+Eu (Fellipe) vim agradecer aos meu amigos e aos dias que fizemos esse trabalho juntos,
+foi algo muito divertido e memorável que nunca vamos esquecer os nossos esforços e principalmente
+os dias que passamos juntos nos divertindo, mesmo dias simples, eles sempre estavam la, se divetindo
+com qualquer coisa que a gente dizia, e com essa mensagem vim agradecer tudo que esse projeto me proporcionou.
+Obrigado a todos que ajudaram no projeto e que tenham uma vida feliz sem arrependimentos.
 "Mais do que código, construímos conexões. Mais do que software, construímos confiança."
 
 Última atualização: Dezembro de 2025 | Versão: 1.0.0
