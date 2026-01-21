@@ -187,7 +187,7 @@ git clone https://github.com/seu-usuario/lookemploy.git
 cd lookemploy
 
 # 2. Configure o banco de dados
-mysql -u root -p < database/lookemploy.sql
+mysql -u root -p < sql/lookemploy.sql
 
 # 3. Instale dependências
 cd api_chat
@@ -233,7 +233,7 @@ Crie um arquivo .env na raiz do projeto:
 
   DB_PASS=sua_senha
 
-  JWT_SECRET=sua_chave_secreta_aqui
+  JWT_SECRET=sua_chave_secreta_aqui> .env
 
 4. Configuração do WebSocket
 Porta padrão: 8080
