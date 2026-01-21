@@ -182,9 +182,9 @@ lookemploy/
 
 ### Passos básicos
 
-AVISO IMPORTANTE
+# AVISO IMPORTANTE
 
-**extraia todos os arquivos .rar dentro do vendo**
+# extraia todos os arquivos .rar dentro do vendo
 
 # 1. Clone o repositório
 git clone https://github.com/seu-usuario/lookemploy.git
