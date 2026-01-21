@@ -338,7 +338,7 @@ Commits: Conventional Commits
 Copyright (c) 2025 [Seu Nome]
 
 Este projeto foi desenvolvido como Trabalho de Conclusão de Curso (TCC)
-na [Sua Faculdade], curso de [Seu Curso].
+na Etec de Itaquera durante o Ensino Médio com Habilitação Profissional de Técnico em Desenvolvimento de Sistemas.
 
 É permitido:
 - Estudar, analisar e testar o código
