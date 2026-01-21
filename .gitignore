@@ -1,2 +1,5 @@
+api_chat/vendor/
+/vendor/
+composer.phar
 .env
-.env.local
+*.log
