@@ -234,7 +234,7 @@ Crie um arquivo .env na raiz do projeto:
 
   JWT_SECRET=sua_chave_secreta_aqui
 
-5. Configuração do WebSocket
+4. Configuração do WebSocket
 Porta padrão: 8080
 
 Certifique-se de que a porta está liberada no firewall
@@ -354,16 +354,27 @@ Para outros usos, entre em contato.
 Certifique-se de que a pasta img/img_perfil tem permissão de escrita
 
 👥 Autores
-LookEmploy
+
+LOOKEMPLOY
+
 Fellipe Alencar Calorio Silva
+
 Bernado Vitorio Leme Nicolás
+
 João Victor De Jesus Silva
+
 Giuliano Toniolo
+
 Diego Quirino Ferreira
+
 Alexandre Crivelaro Fonseca Orientador(a) do TCC
+
 Instituição de Ensino: ETEC DE ITAQUERA
+
 Curso: Desenvolvimento de Sistemas
+
 Período: 2023.1/2026
+
 Disciplina: Trabalho de Conclusão de Curso
 
 ### 🙏 Agradecimentos
