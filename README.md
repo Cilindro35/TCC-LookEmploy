@@ -91,47 +91,45 @@
 
 ---
 
-## 📁 Estrutura do Projeto
 lookemploy/
+├── 📂 api_chat/
+│ ├── 📂 src/Security/ # Autenticação, criptografia, logs
+│ ├── 📄 servidor_chat_seguro.php
+│ └── 📂 vendor/
 │
-├── api_chat/ # Servidor WebSocket e APIs
-│ ├── src/Security/ # Classes de segurança
-│ ├── servidor_chat_seguro.php
-│ └── vendor/ # Dependências Composer
+├── 🎨 css/
+│ ├── design_cadastro.css
+│ ├── design_login.css
+│ ├── design_perfil.css
+│ ├── design_contatos.css
+│ ├── design_pedidos.css
+│ └── design_telaInicial.css
 │
-
-├── css/ # Folhas de estilo
-│ ├── design_.css # Estilos por página
-│ └── ...
+├── ⚡ js/
+│ ├── validacaoCadastro.js
+│ ├── validacaoLogin.js
+│ ├── contatos_seguro.js # Chat em tempo real
+│ └── menuLateral.js
 │
-
-├── js/ # Scripts JavaScript
-│ ├── validacao.js # Validações de formulário
-│ ├── contatos_seguro.js # Lógica do chat
-│ └── menuLateral.js # Menu responsivo
-│
-
-├── php/ # Backend tradicional
+├── 🖥️ php/
 │ ├── realizarCadastro.php
 │ ├── realizarLogin.php
-│ └── ...
+│ ├── realizarLogout.php
+│ └── excluirConta.php
 │
-
-├── img/ # Assets visuais
+├── 🖼️ img/
 │ ├── logo.png
+│ ├── logo_icon.png
 │ ├── img_perfil/ # Fotos de usuários
-│ └── ...
+│ └── telaInicial/ # Banner da home
 │
-
-├── index.html # Página inicial
-├── cadastro.html # Cadastro de usuários
-├── login.html # Página de login
-├── telaInicial.php # Dashboard
-├── contatos.php # Sistema de chat
-├── perfil.php # Perfil do usuário
-├── pedidos.php # Gestão de serviços
-└── README.md # Este arquivo
-
+├── 📄 index.html # Landing page
+├── 📄 cadastro.html # Cadastro
+├── 📄 login.html # Login
+├── 📄 telaInicial.php # Dashboard
+├── 📄 perfil.php # Perfil
+├── 📄 contatos.php # Chat
+└── 📄 pedidos.php # Serviços contratados
 ---
 
 ## ⚡ Instalação Rápida
