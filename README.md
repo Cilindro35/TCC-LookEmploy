@@ -308,9 +308,9 @@ Certifique-se de que a pasta img/img_perfil tem permissão de escrita
 LookEmploy
 Fellipe Alencar Calorio Silva
 Bernado Vitorio Leme Nicolás
-João Jesus da Silva
+João Victor De Jesus Silva
 Giuliano Toniolo
-Diego Quirino
+Diego Quirino Ferreira
 Alexandre Crivelaro Fonseca Orientador(a) do TCC
 Instituição de Ensino: ETEC DE ITAQUERA
 Curso: Desenvolvimento de Sistemas
