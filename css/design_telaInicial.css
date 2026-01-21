@@ -1,0 +1,280 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  font-family: "poppins", sans-serif;
+  background: white;
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+hr {
+  margin: 8px 0 0 0;
+  color: #000000;
+}
+
+a {
+  margin: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  height: 40px;
+  background: #303C4E;
+  padding: 0 16px 0 16px;
+
+  color: whitesmoke;
+  text-align: center;
+
+  box-shadow: none;
+
+  border-style: none;
+  border-radius: 5px;
+
+  transition: transform 0.2s ease;
+}
+
+button:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/*CABEÇALHO*/
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  position: fixed;
+
+  background-color: #303C4E;
+  box-shadow: 0px 0px 5px #000000;
+  z-index: 1000;
+}
+
+header nav {
+  height: 75px;
+  padding: 0 16px 0 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
+}
+
+header img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.background {
+  height: 240px;
+  background: whitesmoke;
+}
+
+/* Faixa lateral */
+.menuLateral {
+  top: 75px;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 75px; /* Largura do menu */
+  display: flex;
+  flex-direction: column; /* Empilhar imagens */
+  align-items: center;
+  background-color: #303C4E;
+  padding-top: 75px;
+}
+
+.menuItem {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.menuItem:hover {
+  background-color: #3F4E65;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.menuItem img {
+  width: 55%;
+  height: 55%;
+}
+
+/*BOTÕES*/
+input[type="button"],
+input[type="submit"],
+select {
+   padding: 8px 16px;
+   width: fit-content;
+   text-align: center;
+   font-weight: bold;
+   background: #5CE1E6;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background 1ms;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+select:hover {
+   background: #00cccc;
+}
+
+/*TELA INCIAL*/
+.telaInicial {
+  margin: 100px 0 0 75px;
+  padding: 32px 10% 32px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/*Baners de categorias*/
+.banners {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #47949f;
+  border: 1px solid;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-size: 1.1em;
+  cursor: pointer;
+  text-align: center;
+  width: 300px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  color: #ccc;
+}
+
+.card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.17);
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.card p {
+  font-weight: 600;
+  color: white;
+  display: block;
+  padding: 20px 10px;
+}
+
+/* Itens recomendados */
+.recomendados {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.Item {
+  background: whitesmoke;
+  padding: 8px;
+  border-style: none;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0px 1px 3px #000000;
+  gap: 16px
+}
+
+.Item:hover {
+  transform: scale(1.01);
+}
+
+.perfilImg {
+  width: 100px;
+  height: 100px;
+  border-style: solid;
+  border-radius: 100px;
+}
+
+.descricao {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .menuLateral {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    gap: 8px;
+  }
+
+  .menuItem {
+    width: 80px;
+    height: 80px;
+  }
+
+  .card {
+    width: 200px;
+  }
+
+  .telaInicial {
+    margin: 100px 0 80px 0; /* espaço para o menu inferior */
+    padding: 32px 5%;
+  }
+}
