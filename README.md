@@ -184,7 +184,7 @@ lookemploy/
 
 # AVISO IMPORTANTE
 
-# extraia todos os arquivos .rar dentro do vendo
+# EXTRAÍ TODOS OS ARQUIVOS DENTRO LookEmploy/Api_chat/vendor, Assim a Api funcionara normalmente
 
 # 1. Clone o repositório
 git clone https://github.com/seu-usuario/lookemploy.git
