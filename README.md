@@ -99,25 +99,30 @@ lookemploy/
 │ ├── servidor_chat_seguro.php
 │ └── vendor/ # Dependências Composer
 │
+
 ├── css/ # Folhas de estilo
 │ ├── design_.css # Estilos por página
 │ └── ...
 │
+
 ├── js/ # Scripts JavaScript
 │ ├── validacao.js # Validações de formulário
 │ ├── contatos_seguro.js # Lógica do chat
 │ └── menuLateral.js # Menu responsivo
 │
+
 ├── php/ # Backend tradicional
 │ ├── realizarCadastro.php
 │ ├── realizarLogin.php
 │ └── ...
 │
+
 ├── img/ # Assets visuais
 │ ├── logo.png
 │ ├── img_perfil/ # Fotos de usuários
 │ └── ...
 │
+
 ├── index.html # Página inicial
 ├── cadastro.html # Cadastro de usuários
 ├── login.html # Página de login
