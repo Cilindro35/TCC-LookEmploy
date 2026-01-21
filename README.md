@@ -90,7 +90,7 @@
 - **Input Sanitization** - Prevenção XSS
 
 ---
-
+### 📁 Estrutura Do Projeto
 lookemploy/
 
 ├── 📂 api_chat/
