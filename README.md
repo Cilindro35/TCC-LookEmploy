@@ -200,7 +200,7 @@ php servidor_chat_seguro.php
 # 5. Acesse no navegador
 http://localhost/lookemploy
 
-##🔧 Configuração Detalhada
+### 🔧 Configuração Detalhada
 1. Configuração do Banco de Dados
 Edite o arquivo api_chat/conectar.php:
 $host = 'localhost';
