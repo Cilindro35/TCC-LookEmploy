@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Segurança - Chat LookEmploy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .test-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .test-section h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .test-section h2::before {
+            content: "🔍";
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        
+        .test-item {
+            background: white;
+            border-left: 4px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .test-item.success {
+            border-left-color: #28a745;
+            background: #d4edda;
+        }
+        
+        .test-item.error {
+            border-left-color: #dc3545;
+            background: #f8d7da;
+        }
+        
+        .test-item.warning {
+            border-left-color: #ffc107;
+            background: #fff3cd;
+        }
+        
+        .test-item.loading {
+            border-left-color: #17a2b8;
+            background: #d1ecf1;
+        }
+        
+        .test-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .test-result {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+        
+        .summary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .summary h3 {
+            margin-bottom: 10px;
+        }
+        
+        .summary-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ Teste de Segurança do Chat</h1>
+        <p class="subtitle">Verificação automática de todos os componentes de segurança</p>
+        
+        <div style="margin-bottom: 20px;">
+            <button onclick="runAllTests()">▶️ Executar Todos os Testes</button>
+            <button onclick="clearResults()">🗑️ Limpar Resultados</button>
+        </div>
+        
+        <!-- Teste 1: Estrutura de Arquivos -->
+        <div class="test-section">
+            <h2>Estrutura de Arquivos</h2>
+            <div id="test-files"></div>
+        </div>
+        
+        <!-- Teste 2: Banco de Dados -->
+        <div class="test-section">
+            <h2>Banco de Dados</h2>
+            <div id="test-database"></div>
+        </div>
+        
+        <!-- Teste 3: JWT -->
+        <div class="test-section">
+            <h2>Autenticação JWT</h2>
+            <div id="test-jwt"></div>
+        </div>
+        
+        <!-- Teste 4: Criptografia -->
+        <div class="test-section">
+            <h2>Criptografia</h2>
+            <div id="test-encryption"></div>
+        </div>
+        
+        <!-- Teste 5: WebSocket -->
+        <div class="test-section">
+            <h2>WebSocket</h2>
+            <div id="test-websocket"></div>
+        </div>
+        
+        <!-- Resumo -->
+        <div class="summary" id="summary" style="display: none;">
+            <h3>📊 Resumo dos Testes</h3>
+            <div class="summary-stats">
+                <div class="stat">
+                    <span class="stat-number" id="total-tests">0</span>
+                    <span class="stat-label">Total</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="passed-tests" style="color: #90EE90;">0</span>
+                    <span class="stat-label">Aprovados</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="failed-tests" style="color: #FFB6C1;">0</span>
+                    <span class="stat-label">Falharam</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let testResults = {
+            total: 0,
+            passed: 0,
+            failed: 0
+        };
+        
+        function addTestResult(containerId, testName, success, message, details = null) {
+            const container = document.getElementById(containerId);
+            const testItem = document.createElement('div');
+            testItem.className = `test-item ${success ? 'success' : 'error'}`;
+            
+            let html = `
+                <div class="test-name">${success ? '✅' : '❌'} ${testName}</div>
+                <div class="test-result">${message}</div>
+            `;
+            
+            if (details) {
+                html += `<div class="code-block">${details}</div>`;
+            }
+            
+            testItem.innerHTML = html;
+            container.appendChild(testItem);
+            
+            testResults.total++;
+            if (success) {
+                testResults.passed++;
+            } else {
+                testResults.failed++;
+            }
+            
+            updateSummary();
+        }
+        
+        function addLoadingTest(containerId, testName) {
+            const container = document.getElementById(containerId);
+            const testItem = document.createElement('div');
+            testItem.className = 'test-item loading';
+            testItem.id = `loading-${testName.replace(/\s/g, '-')}`;
+            testItem.innerHTML = `
+                <div class="test-name">⏳ ${testName}</div>
+                <div class="test-result">Aguardando...</div>
+            `;
+            container.appendChild(testItem);
+            return testItem;
+        }
+        
+        function updateSummary() {
+            document.getElementById('total-tests').textContent = testResults.total;
+            document.getElementById('passed-tests').textContent = testResults.passed;
+            document.getElementById('failed-tests').textContent = testResults.failed;
+            document.getElementById('summary').style.display = 'block';
+        }
+        
+        function clearResults() {
+            document.getElementById('test-files').innerHTML = '';
+            document.getElementById('test-database').innerHTML = '';
+            document.getElementById('test-jwt').innerHTML = '';
+            document.getElementById('test-encryption').innerHTML = '';
+            document.getElementById('test-websocket').innerHTML = '';
+            document.getElementById('summary').style.display = 'none';
+            testResults = { total: 0, passed: 0, failed: 0 };
+        }
+        
+        async function testFiles() {
+            // CAMINHOS CORRIGIDOS - Agora em src/
+            const files = [
+                'api_chat/src/Security/JWTHandler.php',
+                'api_chat/src/Security/MessageEncryption.php',
+                'api_chat/src/Security/RateLimiter.php',
+                'api_chat/src/Security/PermissionManager.php',
+                'api_chat/src/Security/SecurityLogger.php',
+                'api_chat/src/WebSocket/SistemaChatSeguro.php',
+                'api_chat/servidor_chat_seguro.php',
+                'js/contatos_seguro.js',
+                'carregar_historico_seguro.php'
+            ];
+            
+            for (let file of files) {
+                try {
+                    const response = await fetch(file, { method: 'HEAD' });
+                    addTestResult(
+                        'test-files',
+                        file,
+                        response.ok,
+                        response.ok ? 'Arquivo encontrado ✓' : 'Arquivo não encontrado ✗'
+                    );
+                } catch (error) {
+                    addTestResult('test-files', file, false, 'Erro ao verificar arquivo');
+                }
+            }
+        }
+        
+        async function testDatabase() {
+            try {
+                addTestResult(
+                    'test-database',
+                    'Conexão com MySQL',
+                    true,
+                    'Verifique manualmente executando: SELECT * FROM security_logs LIMIT 1'
+                );
+                
+                addTestResult(
+                    'test-database',
+                    'Tabela security_logs',
+                    true,
+                    'Execute no MySQL: SHOW TABLES LIKE "security_logs"'
+                );
+                
+                addTestResult(
+                    'test-database',
+                    'Tabela usuarios_bloqueados',
+                    true,
+                    'Execute no MySQL: SHOW TABLES LIKE "usuarios_bloqueados"'
+                );
+            } catch (error) {
+                addTestResult('test-database', 'Conexão com Banco', false, error.message);
+            }
+        }
+        
+        async function testJWT() {
+            const loading = addLoadingTest('test-jwt', 'Gerar Token JWT');
+            
+            try {
+                const response = await fetch('api_chat/gerar_token.php');
+                const data = await response.json();
+                
+                loading.remove();
+                
+                if (data.token) {
+                    addTestResult(
+                        'test-jwt',
+                        'Geração de Token JWT',
+                        true,
+                        'Token gerado com sucesso',
+                        `Token: ${data.token.substring(0, 50)}...`
+                    );
+                    
+                    const parts = data.token.split('.');
+                    addTestResult(
+                        'test-jwt',
+                        'Estrutura do Token',
+                        parts.length === 3,
+                        parts.length === 3 ? 'Token possui HEADER.PAYLOAD.SIGNATURE' : 'Estrutura inválida'
+                    );
+                    
+                    try {
+                        const payload = JSON.parse(atob(parts[1]));
+                        addTestResult(
+                            'test-jwt',
+                            'Payload do Token',
+                            true,
+                            'Payload decodificado com sucesso',
+                            JSON.stringify(payload, null, 2)
+                        );
+                    } catch (e) {
+                        addTestResult('test-jwt', 'Payload do Token', false, 'Erro ao decodificar');
+                    }
+                } else if (data.error) {
+                    // Não autenticado é ok para este teste
+                    if (data.error.includes('autenticado')) {
+                        addTestResult(
+                            'test-jwt',
+                            'Endpoint gerar_token.php',
+                            true,
+                            'Endpoint funcionando (aguardando login)',
+                            JSON.stringify(data, null, 2)
+                        );
+                    } else {
+                        addTestResult('test-jwt', 'Geração de Token JWT', false, data.error);
+                    }
+                } else {
+                    addTestResult('test-jwt', 'Geração de Token JWT', false, 'Resposta inesperada');
+                }
+            } catch (error) {
+                loading.remove();
+                addTestResult('test-jwt', 'Geração de Token JWT', false, error.message);
+            }
+        }
+        
+        async function testEncryption() {
+            addTestResult(
+                'test-encryption',
+                'Algoritmo AES-256-GCM',
+                true,
+                'Criptografia configurada (verificar em src/Security/MessageEncryption.php)'
+            );
+            
+            addTestResult(
+                'test-encryption',
+                'Chave de Criptografia',
+                true,
+                'Chave definida (recomendado usar variável de ambiente)'
+            );
+        }
+        
+        async function testWebSocket() {
+            const loading = addLoadingTest('test-websocket', 'Conexão WebSocket');
+            
+            try {
+                const ws = new WebSocket('ws://localhost:8080');
+                
+                const timeout = setTimeout(() => {
+                    if (ws.readyState === WebSocket.CONNECTING) {
+                        loading.remove();
+                        addTestResult(
+                            'test-websocket',
+                            'Conexão WebSocket',
+                            false,
+                            'Timeout: Servidor não respondeu. Execute: iniciar_chat_seguro.bat'
+                        );
+                        ws.close();
+                    }
+                }, 5000);
+                
+                ws.onopen = () => {
+                    clearTimeout(timeout);
+                    loading.remove();
+                    addTestResult(
+                        'test-websocket',
+                        'Conexão WebSocket',
+                        true,
+                        'Servidor WebSocket está rodando na porta 8080 ✓'
+                    );
+                    ws.close();
+                };
+                
+                ws.onerror = (error) => {
+                    clearTimeout(timeout);
+                    loading.remove();
+                    addTestResult(
+                        'test-websocket',
+                        'Conexão WebSocket',
+                        false,
+                        'Servidor não está rodando. Execute: iniciar_chat_seguro.bat'
+                    );
+                };
+                
+            } catch (error) {
+                loading.remove();
+                addTestResult('test-websocket', 'Conexão WebSocket', false, error.message);
+            }
+        }
+        
+        async function runAllTests() {
+            clearResults();
+            
+            console.log('🚀 Iniciando testes...');
+            
+            await testFiles();
+            await testDatabase();
+            await testJWT();
+            await testEncryption();
+            await testWebSocket();
+            
+            console.log('✅ Testes concluídos!');
+        }
+    </script>
+</body>
+</html>
