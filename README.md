@@ -1,6 +1,6 @@
 # 🏗️ LookEmploy - Plataforma de Conexão entre Clientes e Prestadores
 
-![Banner do Projeto]blob:https://web.whatsapp.com/a1ee3926-0a4a-495a-a577-f4502e942f58)
+![Banner do Projeto][blob:https://web.whatsapp.com/a1ee3926-0a4a-495a-a577-f4502e942f58)](https://ibb.co/XxtTSdYx)
 
 > **Sistema web completo para conectar quem precisa de serviços com quem oferece, focando em construção civil e reformas.**
 
