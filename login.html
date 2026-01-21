@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="css/design_login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/logo_icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img class="headerImg" src="img/logo.png"/>
+        </a>
+    </header>
+
+    <section class="login">
+        <form class="formulario" id="formulario">
+            <h2>Entrar na conta</h2>
+            <div class="row"><a target="_self" href="index.html"><input type="button" value="Voltar" ></a></div>
+
+            <!-- Tipo -->
+             <div class="tipoConta">
+                <p>Tipo da conta:</p>
+                <select name="tipo" id="tipo">
+                    <option value="Cliente">Cliente</option>
+                    <option value="Prestador">Prestador</option>
+                </select>
+            </div>
+
+            <!-- Email -->
+            <input type="email" id="email" name="email" placeholder="Email">
+            <span id="emailInvalido" style="color: red;"></span>
+
+            <!-- Senha -->
+            <input type="password" id="senha" name="senha" placeholder="Senha">
+            <span id="senhaInvalida" style="color: red;"></span>
+
+            <!-- Não possui conta -->
+            <div class="col">
+                <a href="cadastro.html">Não possui conta?</a>
+            </div>
+            <input type="submit" value="Entrar">
+            <p id="msgSucesso"></p>
+        </form>
+    </section>
+</div>
+<script src="js/validacaoLogin.js"></script>
+   
+</body>
+</html>
