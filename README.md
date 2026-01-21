@@ -203,11 +203,17 @@ php servidor_chat_seguro.php
 http://localhost/lookemploy
 
 ### 🔧 Configuração Detalhada
+
 1. Configuração do Banco de Dados
+
 Edite o arquivo api_chat/conectar.php:
+
 $host = 'localhost';
+
 $dbname = 'lookemploy';
+
 $username = 'root';
+
 $password = 'sua_senha';
 
 2. Configuração do Servidor Web
@@ -217,13 +223,18 @@ Nginx: Configure o root para o diretório do projeto
 
 3. Variáveis de Ambiente (Opcional)
 Crie um arquivo .env na raiz do projeto:
+
 DB_HOST=localhost
+
 DB_NAME=lookemploy
+
 DB_USER=root
+
 DB_PASS=sua_senha
+
 JWT_SECRET=sua_chave_secreta_aqui
 
-4. Configuração do WebSocket
+5. Configuração do WebSocket
 Porta padrão: 8080
 
 Certifique-se de que a porta está liberada no firewall
