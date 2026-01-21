@@ -181,6 +181,11 @@ lookemploy/
 - Composer
 
 ### Passos básicos
+
+AVISO IMPORTANTE
+
+**extraia todos os arquivos .rar dentro do vendo**
+
 # 1. Clone o repositório
 git clone https://github.com/seu-usuario/lookemploy.git
 cd lookemploy
@@ -335,7 +340,7 @@ HTML/CSS: Semântico e acessível
 
 Commits: Conventional Commits
 
-Copyright (c) 2025 [Seu Nome]
+Copyright (c) 2025 LookEmploy
 
 Este projeto foi desenvolvido como Trabalho de Conclusão de Curso (TCC)
 na Etec de Itaquera durante o Ensino Médio com Habilitação Profissional de Técnico em Desenvolvimento de Sistemas.
